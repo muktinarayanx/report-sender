@@ -4,7 +4,7 @@
 // Handles the HTTP request to the backend.
 // Uses native fetch (no extra dependencies).
 
-const API_BASE = "/api";
+const API_BASE = `${import.meta.env.VITE_API_URL}/api`;
 
 /**
  * Sends a report (PDF) to multiple recipients.
