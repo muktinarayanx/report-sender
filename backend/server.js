@@ -18,13 +18,18 @@ const PORT = process.env.PORT || 5000;
 // CORS — allow frontend to call this API
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"], // Vite & CRA defaults
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://report-sender-eight.vercel.app"
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })
 );
 
 // Parse JSON bodies (for non-file routes if needed later)
+
 app.use(express.json());
 
 // ── Routes ─────────────────────────────────────
